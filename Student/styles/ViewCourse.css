@@ -1,0 +1,338 @@
+body{
+  font-family :Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-right:5px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.navbar{
+  background-color: navy;
+  height:100px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.container{
+  display : flex;
+}
+
+.sidebar{
+  background-color: black;
+  height: 100vh;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  transition: 0.15s color;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout:hover{
+  color: aquamarine;
+}
+
+.logout:active{
+  opacity: 0.5;
+}
+
+h1{
+  color:white;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.15s color;
+}
+
+h1:active{
+  color: yellow
+}
+
+.side-content{
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.18s color;
+  font-weight: bold;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
+}
+
+.current-btn {
+  color: yellow;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.current-btn:hover {
+  opacity: 0.75;
+  text-decoration: none; 
+}
+
+.current-btn:active {
+  color: #ffffcc; 
+}
+
+
+.side-content:hover{
+  color:yellow;
+}
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Make this a positioning context */
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: navy;
+  position: absolute;
+  top: calc(100% - 27px);
+  left: 100%;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+
+.submenu-btn {
+  color: white;
+  background-color: navy;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border: none;
+  width: 140px;
+  cursor: pointer;
+  transition: 0.13s ease color;
+}
+
+.submenu-btn:hover{
+  color:yellow;
+}
+
+.submenu-btn:active{
+  color:aquamarine;
+}
+
+.display-none{
+  display: none;
+}
+
+.display-flex{
+  display: flex;
+}
+
+/*Main Content Css*/
+.content{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin-left: 80px;
+  margin-top: 20px;
+  gap:20px;
+}
+
+.std-profile{
+  display: flex;
+  gap:20px;
+  align-items: top;
+}
+
+.profile-image{
+  margin-left: 10px;
+}
+
+.image{
+  height: 140px;
+  width:140px;
+  object-fit:cover;
+  border:2px solid rgb(0, 0, 0);
+  border-radius:70px;
+}
+
+.profile-data{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  margin-right: 20px;
+}
+
+.profile-name {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #1a1a1a; /* deep dark gray */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.profile-name::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.profile-name:hover::after {
+  width: 100%;
+}
+
+
+.profile-rn{
+  display: flex;
+  gap: 5px;
+  color:rgb(8, 135, 233);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.rn{
+  color: #1e1e1e;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile-sec{
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.section-icon{
+  color: #e74c3c;
+}
+
+.sec{
+  color: #1e1e1e;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.line{
+  height: 2px;
+  width: 100%;
+  background-color: royalblue;
+}
+
+.pdf-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pdf-btn:hover {
+  background-color: darkred;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+}
+
+.child-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 15px;
+  border-radius:10px;
+}
+
+.child-grid:hover {
+  transform: translateY(-5px); /* lifts up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* deeper shadow on hover */
+}
+
+.course-name{
+  display: flex;
+  gap:5px;
+  align-items: center;
+}
+
+.tr-cr{
+  display: flex;
+  gap:10px;
+}
+
+.section-status{
+  display: flex;
+  gap:10px;
+}
+
+.c-name {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+}
+
+
+.course-teacher{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+}
+
+.course-creditHour{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+}
+
+.course-section{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+}
+
+.course-status{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+}
+
+
+
+
+

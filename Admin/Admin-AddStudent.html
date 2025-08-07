@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registeration</title>
+  <link rel="stylesheet" href="./styles/AddStudent.css">
+</head>
+<body>
+   <div class="Box">
+   <h1> <img src="/Images/original.png" alt="" height="80px" class="Image">Add Student</h1>
+   <h1 class="Form-Heading">Form</h1>
+    <p>--Fill Your Data--</p>
+    <div class="Data">
+      <div class="c1">
+        <label for="">Name:</label>
+        <label for="">Roll No:</label>
+        <label for="">Password:</label>
+        <label for="">Section:</label>
+        <label for="">Select Image:</label>
+      </div>
+      <div class="c2">
+        <input type="text" placeholder="Name" id="name">
+        <input type="text" placeholder="Roll-No" id="Roll-No">
+        <input type="password" placeholder="Password" id="password">
+        <select name="" id="select">
+          <option value="">--Select Section--</option>
+          <option value="Section A">Section A</option>
+          <option value="Section B">Section B</option>
+          <option value="Section C">Section C</option>
+          <option value="Section D">Section D</option>
+        </select>
+        <input type="file" id="imageFile" accept=".png, .jpg, .jpeg, image/*">
+      </div>
+    </div>
+    <div>
+      <button class="register-btn" id="register">Register</button>
+    </div>
+  </div>
+
+  <script src="./scripts/AddStudent.js"></script>
+</body>
+</html>

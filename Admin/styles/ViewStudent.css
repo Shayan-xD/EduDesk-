@@ -1,0 +1,276 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family :Arial, Helvetica, sans-serif; /* Optional: Prevents page-level scroll */
+}
+
+
+.navbar{
+  background-color: navy;
+  height:100px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 100px); /* subtracting navbar height */
+  overflow: hidden; /* avoids inner scroll if you want full-page layout */
+}
+
+
+.sidebar{
+  background-color: black;
+  height: 100vh;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  transition: 0.15s color;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout:hover{
+  color: aquamarine;
+}
+
+.logout:active{
+  opacity: 0.5;
+}
+
+h1{
+  color:white;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.15s color;
+}
+
+h1:active{
+  color: yellow
+}
+
+.side-content{
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.15s color;
+  font-weight: bold;
+}
+
+a{
+  cursor: pointer;
+}
+
+.side-content:hover{
+  color:yellow;
+}
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Make this a positioning context */
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: navy;
+  position: absolute;
+  top: calc(100% - 27px);
+  left: 100%;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+
+.submenu-btn {
+  color: white;
+  background-color: navy;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border: none;
+  width: 120px;
+  cursor: pointer;
+  transition: 0.13s ease color;
+}
+
+.submenu-btn:hover{
+  color:yellow;
+}
+
+.submenu-btn:active{
+  color:aquamarine;
+}
+
+.display-none{
+  display: none;
+}
+
+.display-flex{
+  display: flex;
+}
+
+.section-grid{
+  display: flex;
+  gap:100px;
+  justify-content: center;
+}
+
+.content{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  gap:20px;
+  padding-top:20px;
+}
+
+/*Section Buttons CSS*/
+.section-btn{
+  height:120px;
+  width:200px;
+  color : white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  background-color:navy;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.13s ease color;
+  transition: 0.13s ease background-color;
+}
+
+.section-btn:hover{
+  background-color: white;
+  color: black;
+  border : 2px solid black;
+}
+
+.section-btn:active{
+  background-color: black;
+  color: white;
+}
+
+/*Table CSS*/
+.std {
+  width: 80%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #fdfdfd;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header */
+.std thead {
+  background-color: navy; /* Crimson red */
+  color: white;
+  font-size: 18px;
+}
+
+.std th, .std td {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+}
+
+/* Alternating row colors */
+.std tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+hr {
+  width: 78%;
+  height: 4px;
+  border: none;
+  background-color:black; /* Crimson to Navy */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.status-block {
+  color: white;
+  background-color: crimson;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status-unblock {
+  color: white;
+  background-color: goldenrod;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bg-black{
+  background-color: black;
+  color:white;
+}
+
+.current-btn {
+  color: yellow;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* Add a subtle underline on hover */
+.current-btn:hover {
+  color: gold;
+}
+
+.current-btn:active {
+  color: aquamarine;
+  transform: scale(0.98);
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Red */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.delete-btn:active {
+  transform: scale(0.96); /* Slightly shrink on click */
+  background-color: #a93226; /* Even darker red */
+}

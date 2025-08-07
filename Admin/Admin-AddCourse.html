@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Course</title>
+  <link rel="stylesheet" href="./styles/AddCourse.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!--Navabr-->
+  <div class="navbar">
+    <h1 onclick="window.location.href = '../Admin/AdminHome.html'">Admin Dashboard</h1>
+    <a href="#" class="logout" onclick="Logout();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <a href=""class="side-content" onclick="Student(event);">Student</a>
+        <div class="std-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content" onclick="Admin(event);">Admin</a>
+        <div class="admin-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content current-btn" onclick="Course(event);">Course</a>
+        <div class="section-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="Admin-Profile.html" class="side-content">Profile</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="course">
+        <div class="course-add"><button class="courseAdd-btn" id="cr-btn">Add Course</button></div>
+        <div class="addition" id="cr-add">
+        </div>
+      </div>
+      <hr>
+      <div class="section-grid">
+          <button id="secA" class="section-btn" onclick="sectionA();">Section A</button>
+          <button id="secB" class="section-btn" onclick="sectionB();">Section B</button>
+          <button id="secC" class="section-btn" onclick="sectionC();">Section C</button>
+          <button id="secD" class="section-btn" onclick="sectionD();">Section D</button>
+      </div>
+      <div class="table-container">
+      <table class="cr" border="1px solid black">
+        <thead>
+          <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>Professor</th>
+            <th>Credit Hour</th>
+            <th>Section</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody class="course-body"></tbody>
+      </table>
+    </div>
+    </div>    
+  </div>
+
+
+
+  <script src="./scripts/AddCourse.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let a1 = [1,2,3,4,5];
+    let a2 = [6,7,8,9,10,11,12,13,14,15,16,17];
+
+    let a3 = a1.concat(a2);
+
+    a3.sort((a,b)=>a-b);
+
+    let size = a3.length;
+    console.log(size)
+
+    if(size % 2 === 0){
+      let mid = Math.floor(size / 2);
+      let sum = a3[mid-1]+a3[mid]
+      sum = sum/2;
+      console.log(sum);
+    }else{
+      let mid = Math.floor(size / 2);
+      console.log(a3[mid]);
+    }
+  </script>
+</body>
+</html>

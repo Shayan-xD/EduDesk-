@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Admin</title>
+  <link rel="stylesheet" href="./styles/ViewAdmin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!--Navabr-->
+  <div class="navbar">
+    <h1 onclick="window.location.href = '../Admin/AdminHome.html'">Admin Dashboard</h1>
+    <a href="" class="logout" onclick="LOGOUT();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <a href=""class="side-content" onclick="Student(event);">Student</a>
+        <div class="std-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content current-btn" onclick="Admin(event);">Admin</a>
+        <div class="admin-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content" onclick="Course(event);">Course</a>
+        <div class="section-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="Admin-Profile.html" class="side-content">Profile</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div style="text-align:start; width:80%">
+        <h2 class="admin-heading">Admin List</h2>
+      </div>
+      <table class="std" border="1px solid black">
+        <thead>
+          <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>Eamil</th>
+            <th>Password</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody class="student-body"></tbody>
+      </table>
+    </div>
+        
+  </div>
+
+
+
+  <script src="./scripts/ViewAdmin.js"></script>
+</body>
+</html>

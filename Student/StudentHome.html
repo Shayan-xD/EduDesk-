@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Home</title>
+  <link rel="stylesheet" href="./styles/Home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!--Navabr-->
+  <div class="navbar">
+    <h1 onclick="window.location.href = '../Student/StudentHome.html'">Student Dashboard</h1>
+    <a href="" class="logout" onclick="LOGOUT();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="side-content" onclick="Course(event);">Course</button>
+        <div class="section-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="Student-Profile.html" class="side-content">Profile</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="student"></div>
+    </div>
+
+  </div>
+
+
+
+  <script src="./scripts/Home.js"></script>
+</body>
+</html>

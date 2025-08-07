@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Course</title>
+  <link rel="stylesheet" href="./styles/ViewCourse.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--Navabr-->
+  <div class="navbar">
+    <h1 onclick="window.location.href = '../Student/StudentHome.html'">Student Dashboard</h1>
+    <button class="logout" onclick="LOGOUT();"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </div>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="side-content current-btn" onclick="Course(event);">Course</button>
+        <div class="section-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="Student-Profile.html" class="side-content">Profile</a>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!--Student Profile Data-->
+      <div style="display:flex; justify-content:space-between;">
+        <div class="std-profile">
+          <div class="left-profile"></div>
+          <div class="right-profile"></div>
+        </div>
+
+        <div>
+          <button class="pdf-btn" onclick="downloadPDF()">Download PDF</button>
+        </div>
+      </div>
+      
+      <!--Separater Line-->
+      <div class="line"></div>
+
+      <!--Registered Courses Grid-->
+      <div class="grid"></div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./scripts/ViewCourse.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

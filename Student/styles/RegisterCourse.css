@@ -1,0 +1,252 @@
+body{
+  font-family :Arial, Helvetica, sans-serif;
+  margin: 0;
+  margin-right:5px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.navbar{
+  background-color: navy;
+  height:100px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.container{
+  display : flex;
+}
+
+.sidebar{
+  background-color: black;
+  height: 100vh;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  transition: 0.15s color;
+}
+
+.logout:hover{
+  color: aquamarine;
+}
+
+.logout:active{
+  opacity: 0.5;
+}
+
+h1{
+  color:white;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.15s color;
+}
+
+h1:active{
+  color: yellow
+}
+
+.side-content{
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.18s color;
+  font-weight: bold;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+a{
+  cursor: pointer;
+}
+
+.current-btn {
+  color: yellow;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.current-btn:hover {
+  opacity: 0.75;
+  text-decoration: none; 
+}
+
+.current-btn:active {
+  color: #ffffcc; 
+}
+
+
+.side-content:hover{
+  color:yellow;
+}
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Make this a positioning context */
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: navy;
+  position: absolute;
+  top: calc(100% - 27px);
+  left: 100%;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+
+.submenu-btn {
+  color: white;
+  background-color: navy;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border: none;
+  width: 140px;
+  cursor: pointer;
+  transition: 0.13s ease color;
+}
+
+.submenu-btn:hover{
+  color:yellow;
+}
+
+.submenu-btn:active{
+  color:aquamarine;
+}
+
+.display-none{
+  display: none;
+}
+
+.display-flex{
+  display: flex;
+}
+
+/*Main Content Css*/
+.content{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin-left: 80px;
+  margin-top: 20px;
+  gap:20px;
+}
+
+.line{
+  height: 2px;
+  width: 100%;
+  background-color: royalblue;
+}
+
+
+.c-heading{
+  display: flex;
+  justify-content: left;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Table Css*/
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.course-table thead {
+  background-color: #e0e0e0;
+}
+
+.course-table th,
+.course-table td {
+  border-left: 1px solid #868484; /* dark grey */
+  border-right: 1px solid #868484; /* dark grey */
+  padding: 10px;
+  text-align: left;
+}
+
+.course-table th:first-child,
+.course-table td:first-child {
+  border-left: none;
+}
+
+.course-table th:last-child,
+.course-table td:last-child {
+  border-right: none;
+}
+
+.course-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
+
+.course-table tbody tr:nth-child(even) {
+  background-color: #dcdcdc; /* slightly darker grey */
+}
+
+.register-btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 14px;
+}
+
+.register-btn:hover {
+  background-color: #4169e1; /* lighter royal blue */
+}
+
+.register-btn:active {
+  background-color: #2f54c4;
+  transform: scale(0.97);
+}
+
+.unregister-btn {
+  background-color: #d9534f; /* Bootstrap red-like */
+  color: white;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unregister-btn:hover {
+  background-color: #c9302c;
+  opacity: 0.9;
+}
+
+.unregister-btn:active {
+  background-color: #ac2925;
+  transform: scale(0.98);
+}
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Student</title>
+  <link rel="stylesheet" href="./styles/ViewStudent.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!--Navabr-->
+  <div class="navbar">
+    <h1 onclick="window.location.href = '../Admin/AdminHome.html'">Admin Dashboard</h1>
+    <button class="logout" onclick="LOGOUT();"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </div>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <a href=""class="side-content current-btn" onclick="Student(event);">Student</a>
+        <div class="std-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content" onclick="Admin(event);">Admin</a>
+        <div class="admin-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="" class="side-content" onclick="Course(event);">Course</a>
+        <div class="section-submenu submenu"></div>
+      </div>
+      <div class="sidebar-header">
+        <a href="Admin-Profile.html" class="side-content">Profile</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="section-grid">
+          <button id="secA" class="section-btn" onclick="sectionA();">Section A</button>
+          <button id="secB" class="section-btn" onclick="sectionB();">Section B</button>
+          <button id="secC" class="section-btn" onclick="sectionC();">Section C</button>
+          <button id="secD" class="section-btn" onclick="sectionD();">Section D</button>
+      </div>
+      <hr>
+      <table class="std" border="1px solid black">
+        <thead>
+          <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Section</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="student-body"></tbody>
+      </table>
+    </div>
+        
+  </div>
+
+
+
+  <script src="./scripts/ViewStudent.js"></script>
+</body>
+</html>
